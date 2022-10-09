@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const shopping3 = [
+  {
+    name: "banan",
+    price: 3.99
+  },
+  {
+    name: "Wiśnie",
+    price: 19.99
+  },
+  {
+    name: "Chleb",
+    price: 4.99
+  },
+]
+
+// const price3 = shopping3.reduce((accumulator, product) => {
+//   console.log(accumulator);
+
+//   return accumulator - product.price;
+// }, 500)
+
+// console.log(price3)
+
+// // Sort
+
+// const sortedShoppingList = shopping3.sort((a, b) => {
+//   return a.name > b.name ? 1 : -1;
+// })
+
+// console.log(sortedShoppingList)
+
+const ExpensivePrice = shopping3.sort ((a, b) => b.price - a.price)
+ 
+
+ console.log(ExpensivePrice[0])
+  
+
+const PriceB = shopping3.find(item => item.name === "Chleb")
+
+console.log(PriceB)
+
+
+
+
+
+
+
+// 1. Za pomocą funkcji sort, zwróc produkt, który jest najdrozszy
+// 2. Za pomoca funkcji find, sprawdz cene chleba
+// 3. Za pomoca funkcji reduce, sprawdz srednia wzrostu w klasie. W klasie sa 3 osoby [178, 164, 199]
+    </script>
+</body>
+</html>

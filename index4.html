@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+// 1. Stworz funkcje multiply, ktorej zadaniem bedzie wymnozyc przez siebie 2 liczby
+
+// multiply(3, 3) -> 9
+
+const multiply = (a,b) => a * b;
+
+// function multiply(a, b) {
+//   return a * b;
+// }
+
+console.log(multiply(3,3))
+
+
+// 2. Stworz funkcje, ktora zwroci liczbe znakow z danego stringa
+
+const checkLetter = string => string.length;
+
+// function checkLetter(string) {
+//   return string.length;
+// }
+
+// checkLetter('Damian') -> 6
+
+// 3. Stworz funkcje findByCategory, ktora przyjmuje kolekcje i kategorie, a nastepnie wyszukaj wszystkie ksiazki, ktore maja podana kategorie.
+
+// findByCategory(books2, 'adventure') -> [{ob1}]
+
+const books3 = [
+  {
+    name: "Harry Potter",
+    category: "adventure"
+  },
+  {
+    name: 'Alice in Wonderland',
+    category: 'fantasy'
+  },
+  {
+    name: 'Lord of the Rings',
+    category: 'fantasy'
+  }
+]
+
+const findByCategory = (collection, category) => {
+  return collection.filter(item => {
+    return item.category === category
+  });
+}
+
+console.log(findByCategory(books3, 'fantasy'));
+
+// 4. Rozszerz zadanie 3 o warunek, ze jesli nie znajdziemy zadnej ksiazki o podanej kategorii, to funkcja wyswietli napis "No books"
+
+const findByCategoryExtended = (collection, category) => {
+  const filteredCollection = collection.filter(item => {
+    return item.category === category
+  });
+
+  if(filteredCollection.length === 0) {
+    return 'No Books'
+  }
+
+  return filteredCollection
+}
+
+console.log(findByCategoryExtended(books3, 'fantasy'));
+console.log(findByCategoryExtended(books3, 'fantas'));
+    </Script>
+
+
+</body>
+</html>
